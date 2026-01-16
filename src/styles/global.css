@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Cleric Sans";
+  src: url("/fonts/ClericSans/Cleric%20Sans%20woff2/Cleric-Sans-Text-400.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cleric Sans";
+  src: url("/fonts/ClericSans/Cleric%20Sans%20woff2/Cleric-Sans-Text-600.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-cleric {
+  font-family: "Cleric Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+}
