@@ -11,19 +11,535 @@ import '../styles/global.css';
 		<title>Astro</title>
 	</head>
 	<body>
-		<main class="min-h-screen bg-slate-50 px-6 py-16 text-slate-900">
-			<div class="mx-auto max-w-2xl">
-				<h1 class="font-cleric text-4xl font-bold tracking-tight">cleric-app</h1>
-				<p class="mt-4 text-lg leading-relaxed text-slate-700">
-					O platforma simpla pentru fluxuri rapide si clare.
-				</p>
-				<button
-					class="mt-6 inline-flex items-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
-					type="button"
-				>
-					Incepe acum
-				</button>
+		<main class="min-h-screen bg-white">
+			<div class="w-full bg-black text-white" data-banner>
+				<div class="mx-auto flex max-h-[36px] w-full max-w-[1920px] overflow-hidden px-[40px] py-2 transition-[max-height,padding] duration-300 max-[768px]:px-4 lg:px-[80px] xl:px-[160px]">
+					<div class="flex h-[20px] w-full max-w-[1600px] items-center gap-2 pl-6 max-[768px]:pl-0">
+					<span class="h-4 w-4 shrink-0 max-[768px]:hidden"></span>
+					<div class="font-cleric-text flex flex-1 min-w-0 items-center justify-center text-center text-[14px] font-light leading-[1.45] max-[768px]:text-[15px]">
+						<span class="block min-w-0 truncate">
+							Cleric Named a Gartner® Cool Vendor 2025 in AI for SRE and Observability.
+						</span>
+						<a
+							class="ml-2 shrink-0 font-light text-[#C29CF1] underline decoration-[0.5px] underline-offset-[3px]"
+							href="#"
+						>
+							Find out more
+						</a>
+					</div>
+					<button
+						class="flex h-4 w-4 shrink-0 items-center justify-center cursor-pointer"
+						type="button"
+						aria-label="Close announcement"
+						data-banner-close
+					>
+						<img src="/images/icons/x.svg" alt="" aria-hidden="true" class="h-4 w-4" />
+					</button>
+					</div>
+				</div>
 			</div>
+			<nav
+				class="sticky top-0 z-50 h-[57px] w-full py-3 text-white transition-[background-color,box-shadow] duration-200"
+				data-nav
+			>
+				<div class="mx-auto flex h-[33px] w-full max-w-[1920px] items-center justify-between px-[40px] max-[768px]:max-w-none max-[768px]:px-4 lg:px-[80px] xl:px-[160px]">
+					<a href="#" aria-label="Cleric home">
+						<img
+							src="/images/logo/logo.svg"
+							alt="Cleric"
+							class="nav-logo-light h-[24px] w-[78px]"
+						/>
+						<img
+							src="/images/logo/logo-dark.svg"
+							alt="Cleric"
+							class="nav-logo-dark h-[24px] w-[78px]"
+						/>
+					</a>
+					<div class="nav-links font-cleric-text hidden items-center gap-8 text-[15px] font-normal leading-[1.4] text-white md:flex">
+						<a
+							href="#"
+							class="nav-link relative transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-200 hover:after:scale-x-100"
+						>
+							Product
+						</a>
+						<a
+							href="#"
+							class="nav-link relative inline-flex items-center gap-2 transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-200 hover:after:scale-x-100"
+						>
+							Solutions
+							<img
+								src="/images/icons/chevron-down.svg"
+								alt=""
+								aria-hidden="true"
+								class="nav-chevron h-4 w-4"
+							/>
+						</a>
+						<a
+							href="#"
+							class="nav-link relative inline-flex items-center gap-2 transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-200 hover:after:scale-x-100"
+						>
+							Resources
+							<img
+								src="/images/icons/chevron-down.svg"
+								alt=""
+								aria-hidden="true"
+								class="nav-chevron h-4 w-4"
+							/>
+						</a>
+						<a
+							href="#"
+							class="nav-link relative transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-200 hover:after:scale-x-100"
+						>
+							About
+						</a>
+						<a
+							href="#"
+							class="nav-link relative transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-200 hover:after:scale-x-100"
+						>
+							Careers
+						</a>
+						<a
+							href="#"
+							class="nav-cta inline-flex items-center gap-2 rounded-[150px] bg-white/20 px-4 py-1.5 text-[14px] font-normal text-white backdrop-blur-[4px] transition-[background-color,backdrop-filter] duration-200 hover:bg-white/30 hover:backdrop-blur-[10px]"
+						>
+							Request Demo
+						</a>
+					</div>
+					<button
+						type="button"
+						class="nav-toggle inline-flex h-[33px] w-[33px] items-center justify-center md:hidden"
+						aria-label="Open menu"
+						aria-expanded="false"
+						data-mobile-toggle
+					>
+						<img src="/images/icons/hamburg.svg" alt="" aria-hidden="true" class="h-5 w-5" />
+					</button>
+				</div>
+			</nav>
+			<div class="fixed inset-0 z-[60] hidden" data-mobile-menu>
+				<div
+					class="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-200"
+					data-mobile-backdrop
+				></div>
+				<div
+					class="absolute right-0 top-0 h-full w-[85%] max-w-[360px] bg-white px-6 py-8 shadow-xl transition-transform duration-300"
+					style="transform: translateX(100%);"
+					data-mobile-panel
+				>
+					<div class="flex items-center justify-between">
+						<img src="/images/logo/logo-dark.svg" alt="Cleric" class="h-[24px] w-[78px]" />
+						<button
+							type="button"
+							class="inline-flex h-8 w-8 items-center justify-center"
+							aria-label="Close menu"
+							data-mobile-close
+						>
+							<img src="/images/icons/x.svg" alt="" aria-hidden="true" class="h-4 w-4" />
+						</button>
+					</div>
+					<div class="mt-8 flex flex-col gap-5 text-[16px] text-[#0B1A3A]">
+						<a href="#" class="font-cleric-text">Product</a>
+						<a href="#" class="font-cleric-text inline-flex items-center gap-2">
+							Solutions
+							<img
+								src="/images/icons/chevron-down.svg"
+								alt=""
+								aria-hidden="true"
+								class="mobile-chevron h-4 w-4"
+							/>
+						</a>
+						<a href="#" class="font-cleric-text inline-flex items-center gap-2">
+							Resources
+							<img
+								src="/images/icons/chevron-down.svg"
+								alt=""
+								aria-hidden="true"
+								class="mobile-chevron h-4 w-4"
+							/>
+						</a>
+						<a href="#" class="font-cleric-text">About</a>
+						<a href="#" class="font-cleric-text">Careers</a>
+					</div>
+					<a
+						href="#"
+						class="mt-8 inline-flex items-center justify-center rounded-[150px] bg-[#0B1A3A] px-5 py-3 text-[15px] font-medium text-white"
+					>
+						Request Demo
+					</a>
+				</div>
+			</div>
+			<section class="relative w-full min-h-[1080px] overflow-hidden bg-[#132B60] -mt-[57px] pt-[0px] max-[992px]:min-h-[428px] max-[768px]:min-h-[1164px]">
+				
+
+				<picture class="absolute inset-0 h-full w-full">
+					<source srcset="/images/backgrounds/hero_bg_mobile.png" media="(max-width: 767px)" />
+					<source srcset="/images/backgrounds/hero_bg_tablete.png" media="(max-width: 991px)" />
+					<img src="/images/backgrounds/hero_bg.webp" alt="" aria-hidden="true" class="h-full w-full object-cover" />
+				</picture>
+				<div class="hero-gradient absolute inset-0"></div>
+				<div class="hero-noise absolute inset-0"></div>
+				<div class="relative z-10 mx-auto flex w-full max-w-[1760px] flex-col px-0">
+					<section class="hero-fade-in mt-[87px] flex w-full justify-center text-white">
+						<div class="flex w-full max-w-[1760px] justify-center py-16 max-[992px]:py-0">
+							<div class="flex w-full max-w-[1192px] flex-col items-center gap-12 text-center">
+								<div class="flex h-[49px] w-[482px] items-center gap-3 rounded-[6px] border border-black/10 bg-black/10 p-3 backdrop-blur-[4px]">
+										<span
+											class="font-cleric-text inline-flex h-[25px] items-center rounded-[4px] bg-[#E1DEFE] px-3 py-1 text-[14px] font-medium leading-[1.2] tracking-[-0.25%] text-[#313131] opacity-80 shadow-[0px_3.38px_20.29px_0px_rgba(66,72,70,0.1),0px_3.38px_3.38px_0px_rgba(66,72,70,0.08)]"
+										>
+											Press release
+										</span>
+										<p class="font-cleric-text text-[15px] font-light leading-[1.4] text-white">
+											Cleric launches the first self-learning AI SRE
+										</p>
+										<img
+											src="/images/icons/vector.svg"
+											alt=""
+											aria-hidden="true"
+											class="h-[6.6667px] w-[6.6667px]"
+										/>
+								</div>
+								<div class="flex w-full max-w-[1192px] flex-col items-center gap-8 max-[768px]:px-[14px]">
+									<h1 class="font-gt-alpina max-w-[754px] px-2 text-[56px] font-light leading-[1.15] tracking-[-2%] text-white max-[768px]:px-0 max-[768px]:text-[40px] max-[768px]:font-normal max-[768px]:tracking-[-1.5%] lg:max-w-[960px] lg:text-[72px] lg:font-normal lg:tracking-[-2.5%]">
+										The AI SRE That Learns From Your Engineers
+									</h1>
+									<p class="font-cleric-text max-w-[680px] text-[20px] font-light leading-[1.25] tracking-[0.75%] text-white lg:text-[24px] lg:font-normal">
+										Cleric investigates production issues, captures what works, and makes your whole team faster.
+									</p>
+									<div class="flex items-center justify-center gap-4">
+										<a
+											href="#"
+											class="font-cleric-text inline-flex min-w-[190px] items-center justify-center gap-2 rounded-[123.15px] bg-white px-8 py-3 text-[18px] font-medium leading-[1.4] text-[#313131] transition-all duration-200 ease-out hover:-translate-y-[1px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
+										>
+											Start for Free
+										</a>
+										<a
+											href="#"
+											class="font-cleric-text inline-flex min-w-[190px] items-center justify-center gap-2 rounded-[123.15px] border border-white bg-white/5 px-8 py-3 text-[18px] font-medium leading-[1.4] text-white backdrop-blur-[4px] transition-all duration-200 ease-out hover:bg-white/10 hover:backdrop-blur-[8px]"
+										>
+											Request Demo
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+
+				</div>
+
+
+			
+				<div class="relative z-10 mx-auto mt-[64px] w-full max-w-[734px] max-[992px]:max-w-[773px] max-[1281px]:max-w-[954px] min-[1281px]:max-w-[1192px]">
+
+
+<img
+  src="/images/illustrations/hero-web-ui.webp"
+  class="hidden h-[428.1666px] w-[734px] rounded-[12px] md:block max-[992px]:w-[734px] max-[992px]:h-auto max-[1281px]:w-[900px] max-[1281px]:h-auto min-[1281px]:h-[648.66px] min-[1281px]:w-[1112px]
+  shadow-[0_-10px_24px_-18px_rgba(39,43,49,0.18),
+          -10px_0_24px_-18px_rgba(39,43,49,0.14),
+           10px_0_24px_-18px_rgba(39,43,49,0.14)]"
+/>
+
+<img
+  src="/images/illustrations/hero-slack.webp"
+  class="absolute bottom-0 -right-[0px]
+  h-[303px] w-[220px] rounded-[12px] max-[992px]:w-[220px] max-[992px]:h-auto max-[1281px]:w-[279px] max-[1281px]:h-auto min-[1281px]:h-[441px] min-[1281px]:w-[320px] max-[768px]:hidden
+  shadow-[0_-10px_24px_-18px_rgba(39,43,49,0.18),
+          -10px_0_24px_-18px_rgba(39,43,49,0.14),
+           10px_0_24px_-18px_rgba(39,43,49,0.14)]"
+/>
+<img
+  src="/images/illustrations/hero-slack-mobile.webp"
+  class="relative mx-auto w-[87%] rounded-[24px] max-[768px]:mt-[120px] max-[768px]:block md:hidden
+  shadow-[0_3.38px_20.29px_rgba(66,72,70,0.1),0_3.38px_64.5px_5px_rgba(39,43,49,0.1)]"
+/>
+
+				</div>
+		
+
+				<div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[160px]
+bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_80%)]"></div>
+
+			</section>
+
+
+
+
+
+			<section class="w-full bg-white">
+				<div class="mx-auto flex w-full max-w-[1920px] flex-col items-center gap-8 py-[80px] pb-[40px] text-center max-[993px]:gap-8">
+					<div class="flex w-full max-w-[1192px] flex-col items-center gap-6 md:flex-row md:flex-wrap md:justify-center max-[992px]:max-w-[830px] max-[992px]:gap-8">
+						<div class="flex min-w-[308px] flex-col items-center gap-1">
+							<div class="font-cleric-text text-[32px] font-semibold leading-[1.15] tracking-[-0.5%] text-[#313131] md:text-[40px] min-[1317px]:text-[44px]">
+								5 min
+							</div>
+							<div class="font-cleric-text text-[16px] font-normal leading-[1.4] text-[#313131] lg:text-[18px] max-[767px]:text-[16px]">
+								Time to Root Cause
+							</div>
+						</div>
+						<div class="flex min-w-[308px] flex-col items-center gap-1">
+							<div class="font-cleric-text text-[32px] font-semibold leading-[1.15] tracking-[-0.5%] text-[#313131] md:text-[40px] min-[1317px]:text-[44px]">
+								92%
+							</div>
+							<div class="font-cleric-text text-[16px] font-normal leading-[1.4] text-[#313131] lg:text-[18px] max-[767px]:text-[16px]">
+								Actionable Findings
+							</div>
+						</div>
+						<div class="flex min-w-[308px] flex-col items-center gap-1">
+							<div class="font-cleric-text text-[32px] font-semibold leading-[1.15] tracking-[-0.5%] text-[#313131] md:text-[40px] min-[1317px]:text-[44px]">
+								200,000+
+							</div>
+							<div class="font-cleric-text text-[16px] font-normal leading-[1.4] text-[#313131] lg:text-[18px] max-[767px]:text-[16px]">
+								Production-Grade Investigations
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="w-full bg-white">
+				<div class="mx-auto flex w-full max-w-[1920px] flex-col items-center gap-2 px-[80px] pt-[40px] pb-[160px] max-[768px]:px-4 max-[768px]:pb-20">
+					<div class="flex w-full max-w-[1192px] items-center gap-6 rounded-[16px] border border-[#EAEAEA] bg-[linear-gradient(0deg,#F8F8F8_-0.04%,#F7F9FA_100%)] max-[992px]:max-w-[642px] max-[992px]:gap-10 max-[992px]:p-8 lg:max-w-[1040px] xl:max-w-[1192px] xl:gap-10">
+						<img
+							src="/images/illustrations/maxime.webp"
+							alt="Customer portrait"
+							class="hidden h-[320px] w-[334px] rounded-[16px] object-cover lg:block lg:h-[268px] lg:w-[280px] xl:h-[320px] xl:w-[334px] min-[1281px]:self-end"
+						/>
+						<div class="flex w-full max-w-[818px] flex-col gap-6 pt-6 pr-6 pb-5 text-left max-[1060px]:gap-0 max-[992px]:!p-0 max-[992px]:!gap-10 lg:max-w-[700px] xl:max-w-[818px] xl:gap-10 xl:pt-8 xl:pr-8 xl:pb-6">
+									<img
+										src="/images/icons/blablacar.svg"
+										alt="BlaBlaCar"
+										class="h-[24px] w-[132.1964px] lg:hidden"
+									/>
+									<p class="font-cleric-text text-[24px] font-normal leading-[1.4] tracking-[-0.25%] text-[#313131] max-[767px]:!text-[24px] md:text-[28px] lg:text-[23px] max-[1062px]:!text-[21px] max-[992px]:!text-[28px] min-[1317px]:text-[30px]">
+										“I see Cleric functioning as an SRE companion for our Software
+								Engineers. If one team has already solved an alert, we can apply that
+								knowledge elsewhere.”
+							</p>
+							<div class="space-y-1">
+								<img
+									src="/images/icons/blablacar.svg"
+									alt="BlaBlaCar"
+									class="mb-6 hidden h-[24px] w-[132.1964px] lg:block max-[1060px]:mt-4 min-[1061px]:mt-0"
+								/>
+								<div class="flex w-full items-center justify-between max-[768px]:flex-col max-[768px]:items-start max-[768px]:gap-4">
+									<div class="flex items-center gap-4">
+										<img
+											src="/images/illustrations/maxime-circle.svg"
+											alt="Maxime Fouilleul"
+											class="h-[72px] w-[72px] rounded-full lg:hidden"
+										/>
+										<div class="space-y-1">
+												<div class="font-cleric-text text-[18px] font-semibold leading-[1.4] text-[#313131] max-[767px]:text-[16px]">
+													Maxime Fouilleul
+												</div>
+											<div class="font-cleric-text text-[18px] font-normal leading-[1.4] text-[#313131]">
+												Head of Infrastructure &amp; Operations | BlaBlaCar
+											</div>
+										</div>
+									</div>
+									<a
+										href="#"
+										class="font-cleric-text inline-flex items-center gap-2 whitespace-nowrap rounded-[150px] bg-black px-6 py-2.5 text-[15px] font-medium leading-[1.4] text-white transition-all duration-200 ease-out hover:-translate-y-[1px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)] max-[768px]:h-[41px] max-[768px]:w-[166px] max-[768px]:self-start"
+									>
+										Read case study
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="w-full bg-[linear-gradient(0deg,#F8F8F8_-0.04%,#F7F9FA_100%)]">
+				<div class="mx-auto flex w-full max-w-[1920px] flex-col gap-10 px-[80px] py-[120px]">
+					<div class="mx-auto flex w-full max-w-[1760px] flex-col gap-[64px]">
+						<div class="flex w-full max-w-[960px] flex-col gap-6">
+							<div class="inline-flex items-center justify-center gap-1 rounded-[4px] px-4 py-2.5">
+								<span class="font-cleric-text text-[14px] font-medium leading-[1.2] tracking-[-0.25%] text-[#6B6B6B]">
+									How it works
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 		</main>
+		<script>
+			const closeBtn = document.querySelector('[data-banner-close]');
+			const banner = document.querySelector('[data-banner]');
+			if (closeBtn && banner) {
+				closeBtn.addEventListener('click', () => {
+					banner.style.maxHeight = '0px';
+					banner.style.paddingTop = '0px';
+					banner.style.paddingBottom = '0px';
+					const handle = () => banner.remove();
+					banner.addEventListener('transitionend', handle, { once: true });
+				});
+			}
+
+			const nav = document.querySelector('[data-nav]');
+			const updateNav = () => {
+				if (!nav) return;
+				if (window.scrollY > 8) {
+					nav.classList.add('nav-scrolled');
+				} else {
+					nav.classList.remove('nav-scrolled');
+				}
+			};
+			updateNav();
+			window.addEventListener('scroll', updateNav, { passive: true });
+
+			const mobileMenu = document.querySelector('[data-mobile-menu]');
+			const mobilePanel = document.querySelector('[data-mobile-panel]');
+			const mobileBackdrop = document.querySelector('[data-mobile-backdrop]');
+			const mobileToggle = document.querySelector('[data-mobile-toggle]');
+			const mobileClose = document.querySelector('[data-mobile-close]');
+
+			const openMobileMenu = () => {
+				if (!mobileMenu || !mobilePanel || !mobileBackdrop) return;
+				mobileMenu.classList.remove('hidden');
+				requestAnimationFrame(() => {
+					mobilePanel.style.transform = 'translateX(0)';
+					mobileBackdrop.classList.add('opacity-100');
+				});
+				document.body.style.overflow = 'hidden';
+				mobileToggle?.setAttribute('aria-expanded', 'true');
+			};
+
+			const closeMobileMenu = () => {
+				if (!mobileMenu || !mobilePanel || !mobileBackdrop) return;
+				mobilePanel.style.transform = 'translateX(100%)';
+				mobileBackdrop.classList.remove('opacity-100');
+				const handle = () => {
+					mobileMenu.classList.add('hidden');
+					mobilePanel.removeEventListener('transitionend', handle);
+				};
+				mobilePanel.addEventListener('transitionend', handle);
+				document.body.style.overflow = '';
+				mobileToggle?.setAttribute('aria-expanded', 'false');
+			};
+
+			mobileToggle?.addEventListener('click', openMobileMenu);
+			mobileClose?.addEventListener('click', closeMobileMenu);
+			mobileBackdrop?.addEventListener('click', closeMobileMenu);
+			window.addEventListener('keydown', (event) => {
+				if (event.key === 'Escape') closeMobileMenu();
+			});
+		</script>
 	</body>
 </html>
