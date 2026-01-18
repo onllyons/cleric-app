@@ -173,3 +173,27 @@ img {
     transform: translateY(0);
   }
 }
+
+.footer-links a {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  transition: color 200ms ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.footer-links a:hover::after {
+  transform: scaleX(1);
+}
