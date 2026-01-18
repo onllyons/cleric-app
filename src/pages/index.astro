@@ -24,7 +24,7 @@ import '../styles/global.css';
 	<body>
 		<main class="min-h-screen bg-white">
 			<div class="w-full bg-black text-white" data-banner>
-				<div class="mx-auto flex max-h-[36px] w-full max-w-[1920px] overflow-hidden px-[40px] py-2 transition-[max-height,padding] duration-300 max-[768px]:px-4 lg:px-[80px] xl:px-[160px]">
+				<div class="mx-auto flex max-h-[36px] w-full max-w-[1920px] overflow-hidden px-[40px] py-2 transition-[max-height,padding,opacity] duration-[450ms] ease-out max-[768px]:px-4 lg:px-[80px] xl:px-[160px]" data-banner-inner>
 					<div class="flex h-[20px] w-full max-w-[1600px] items-center gap-2 pl-6 max-[768px]:pl-0">
 					<span class="h-4 w-4 shrink-0 max-[768px]:hidden"></span>
 					<div class="font-cleric-text flex flex-1 min-w-0 items-center justify-center text-center text-[14px] font-light leading-[1.45] max-[768px]:text-[15px]">
@@ -460,13 +460,15 @@ bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_80%)]"></div>
 		<script>
 			const closeBtn = document.querySelector('[data-banner-close]');
 			const banner = document.querySelector('[data-banner]');
-			if (closeBtn && banner) {
+			const bannerInner = document.querySelector('[data-banner-inner]');
+			if (closeBtn && banner && bannerInner) {
 				closeBtn.addEventListener('click', () => {
-					banner.style.maxHeight = '0px';
-					banner.style.paddingTop = '0px';
-					banner.style.paddingBottom = '0px';
+					bannerInner.style.maxHeight = '0px';
+					bannerInner.style.paddingTop = '0px';
+					bannerInner.style.paddingBottom = '0px';
+					bannerInner.style.opacity = '0';
 					const handle = () => banner.remove();
-					banner.addEventListener('transitionend', handle, { once: true });
+					bannerInner.addEventListener('transitionend', handle, { once: true });
 				});
 			}
 
