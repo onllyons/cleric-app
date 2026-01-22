@@ -1,4 +1,4 @@
-const WEBHOOK_URL = "https://webhook.site/94b523da-6e1c-4190-973e-2220cf6ab322";
+const WEBHOOK_URL = "https://webhook.site/a735b873-108d-401f-884d-fdf08f4c84a0";
 
 export const prerender = false;
 
