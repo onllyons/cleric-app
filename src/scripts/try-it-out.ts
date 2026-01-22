@@ -340,7 +340,16 @@ export default function initTryItOut() {
           body: JSON.stringify(payload),
         });
         if (!response.ok) {
-          throw new Error(`Webhook error: ${response.status}`);
+          let errorMessage = `Webhook error: ${response.status}`;
+          try {
+            const data = await response.json();
+            if (data?.error) {
+              errorMessage = data.error;
+            }
+          } catch (parseErr) {
+            // Ignore parsing errors and fall back to status.
+          }
+          throw new Error(errorMessage);
         }
         bookCallBtn.textContent = "Sent!";
         bookCallBtn.disabled = false;
@@ -356,7 +365,9 @@ export default function initTryItOut() {
         bookCallBtn.disabled = false;
         bookCallBtn.textContent = previousLabel;
         if (hint) {
-          hint.textContent = "Something went wrong. Please try again.";
+          const errorMessage =
+            err instanceof Error ? err.message : "Something went wrong. Please try again.";
+          hint.textContent = errorMessage;
           hint.classList.remove("hidden");
         }
       }
