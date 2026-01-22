@@ -2,7 +2,6 @@
 // src/pages/try-it-out.astro
 import "../styles/global.css";
 import "../styles/try-it-out.css";
-import tryItOutUrl from "../scripts/try-it-out.ts?url";
 ---
 
 <html lang="ro">
@@ -650,8 +649,7 @@ import tryItOutUrl from "../scripts/try-it-out.ts?url";
          </div>
       </section>
 
-<script type="module" src={tryItOutUrl}></script>
-
+<script src="../scripts/try-it-out.ts"></script>
 
 
    </body>
