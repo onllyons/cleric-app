@@ -5,7 +5,7 @@ import '../styles/global.css';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/images/logo/icon.png" />
+		<link rel="icon" type="image/png" href="/images/logo/icon.webp" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Cleric - The AI SRE That Learns From Your Engineers</title>
@@ -18,7 +18,7 @@ import '../styles/global.css';
 			property="og:description"
 			content="Cleric helps engineering teams investigate incidents faster with an AI SRE that learns from your engineers."
 		/>
-		<meta property="og:image" content="/images/backgrounds/hero_bg_tablete.png" />
+		<meta property="og:image" content="/images/backgrounds/hero_bg_tablete.webp" />
 		<meta property="og:type" content="website" />
 	</head>
 	<body>
@@ -183,8 +183,8 @@ import '../styles/global.css';
 				
 
 				<picture class="absolute inset-0 h-full w-full">
-					<source srcset="/images/backgrounds/hero_bg_mobile.png" media="(max-width: 767px)" />
-					<source srcset="/images/backgrounds/hero_bg_tablete.png" media="(max-width: 991px)" />
+					<source srcset="/images/backgrounds/hero_bg_mobile.webp" media="(max-width: 767px)" />
+					<source srcset="/images/backgrounds/hero_bg_tablete.webp" media="(max-width: 991px)" />
 					<img src="/images/backgrounds/hero_bg.webp" alt="" aria-hidden="true" class="h-full w-full object-cover" />
 				</picture>
 				<div class="hero-gradient absolute inset-0"></div>
@@ -213,12 +213,12 @@ import '../styles/global.css';
 									<h1 class="font-gt-alpina max-w-[754px] px-2 text-[56px] font-light leading-[1.15] tracking-[-2%] text-white max-[768px]:px-0 max-[768px]:text-[40px] max-[768px]:font-normal max-[768px]:tracking-[-1.5%] lg:max-w-[960px] lg:text-[72px] lg:font-normal lg:tracking-[-2.5%]">
 										The AI SRE That Learns From Your Engineers
 									</h1>
-									<p class="font-cleric-text max-w-[680px] text-[20px] font-light leading-[1.25] tracking-[0.75%] text-white lg:text-[24px] lg:font-normal">
+									<p class="font-cleric-text max-w-[680px] text-[20px] font-light leading-[1.25] tracking-[0.75%] text-white lg:text-[24px]">
 										Cleric investigates production issues, captures what works, and makes your whole team faster.
 									</p>
 									<div class="flex items-center justify-center gap-4 max-[440px]:gap-2 max-[501px]:w-full max-[501px]:flex-row max-[501px]:items-stretch">
 										<a
-											href="#"
+											href="/try-it-out"
 											class="font-cleric-text inline-flex min-w-[190px] items-center justify-center gap-2 rounded-[123.15px] bg-white px-8 py-3 text-[18px] font-medium leading-[1.4] text-[#313131] transition-all duration-200 ease-out hover:-translate-y-[1px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)] max-[501px]:min-w-0 max-[501px]:flex-1"
 										>
 											Start for Free
@@ -363,14 +363,340 @@ bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_80%)]"></div>
 			</section>
 
 			
-			<section class="w-full bg-[linear-gradient(0deg,#F8F8F8_-0.04%,#F7F9FA_100%)]">
-				<div class="mx-auto flex w-full max-w-[1920px] flex-col gap-10 px-[80px] py-[120px]">
-					<div class="mx-auto flex w-full max-w-[1760px] flex-col gap-[64px]">
-						<div class="flex w-full max-w-[960px] flex-col gap-6">
-							<div class="inline-flex items-center justify-center gap-1 rounded-[4px] px-4 py-2.5">
-								<span class="font-cleric-text text-[14px] font-medium leading-[1.2] tracking-[-0.25%] text-[#6B6B6B]">
+			<section class="w-full bg-[linear-gradient(0deg,#F8F8F8_-0.04%,#F7F9FA_100%)]" data-section="hot-to-work">
+				<div class="mx-auto flex w-full flex-col items-center gap-16 px-[80px] py-[120px]">
+					<div class="flex w-full max-w-[960px] flex-col items-center gap-6 text-center">
+						<span class="font-cleric-text inline-flex items-center justify-center rounded-[4px] bg-[#E0E0E0] px-[16px] py-[10px] text-center text-[14px] font-normal leading-[1.2] tracking-[-0.25%] text-[#6B6B6B]">
+							How it works
+						</span>
+						<h2 class="font-gt-alpina text-[48px] font-normal leading-[1.15] tracking-[-0.5%] text-center text-[#313131] max-[1000px]:text-[44px] max-[770px]:text-[36px]">
+							Meet Cleric
+						</h2>
+						<p class="font-cleric-text text-[24px] font-light leading-[1.25] tracking-[0.75%] text-[#6B6B6B] max-[1000px]:text-[20px] max-[770px]:text-[20px]">
+							Cleric investigates problems, surfaces answers, and learns from your engineers.
+						</p>
+					</div>
+					<div class="w-full max-w-[1760px]">
+						<picture>
+							<source
+								srcset="/images/illustrations/intro-diagram-mob.webp"
+								media="(max-width: 770px)"
+							/>
+							<source
+								srcset="/images/illustrations/intro-diagram-tablete.webp"
+								media="(max-width: 1000px)"
+							/>
+							<img
+								src="/images/illustrations/intro-diagram.webp"
+								alt="Cleric workflow diagram"
+								class="w-full h-auto object-contain"
+							/>
+						</picture>
+					</div>
+				</div>
+			</section>
+
+			<section class="w-full bg-white flex justify-center pt-[160px] pb-[80px]" data-section="in-action">
+				<div class="w-full max-w-[1192px] max-[992px]:max-w-[642px] lg:max-w-[1040px] xl:max-w-[1192px]">
+					<div class="flex w-full flex-col items-center gap-6 mb-16 text-center">
+						<span class="font-cleric-text inline-flex items-center justify-center rounded-[4px] bg-[#E0E0E0] px-[16px] py-[10px] text-center text-[14px] font-normal leading-[1.2] tracking-[-0.25%] text-[#6B6B6B]">
+							Cleric in action
+						</span>
+						<h2 class="font-gt-alpina text-[48px] font-normal leading-[1.15] tracking-[-0.5%] text-center text-[#313131] max-[1000px]:text-[44px] max-[770px]:text-[36px]">
+							Things break. Cleric investigates.
+						</h2>
+						<p class="font-cleric-text text-[24px] font-light leading-[1.25] tracking-[0.75%] text-[#6B6B6B] max-[1000px]:text-[20px] max-[770px]:text-[20px]">
+							While you're still reading the alert, Cleric's already three steps into the investigation.
+						</p>
+					</div>
+
+					<div class="flex w-full max-w-[1192px] flex-col gap-8">
+						<div class="rounded-[16px] border border-[#EAEAEA] bg-[#FAFAFA] p-8 md:p-10 lg:p-12">
+							<div class="block space-y-10 min-[1001px]:flex min-[1001px]:flex-row min-[1001px]:items-center min-[1001px]:gap-12 min-[1001px]:space-y-0">
+								<div class="w-[480px] text-left max-[1000px]:w-full max-[770px]:w-full">
+									<h3 class="font-gt-alpina text-[40px] font-normal leading-[1.2] text-[#313131] max-[1000px]:text-[36px] max-[770px]:text-[32px]">
+										Skip straight to the answer
+									</h3>
+									<p class="mt-4 font-cleric-text text-[18px] font-light leading-[1.4] tracking-[0%] text-[#6B6B6B] max-[1000px]:text-[17px] max-[770px]:text-[16px]">
+										Cleric automatically investigates alerts and delivers root cause analysis so you know exactly
+										what's wrong and whether to act.
+									</p>
+								</div>
+								<div class="flex-1">
+									<img
+										src="/images/illustrations/rectangle.webp"
+										alt="Cleric investigation card"
+										class="w-full h-auto object-contain"
+									/>
+								</div>
+							</div>
+						</div>
+
+						<div class="rounded-[16px] border border-[#EAEAEA] bg-[#FAFAFA] p-8 md:p-10 lg:p-12 !pl-0">
+							<div class="block space-y-10 min-[1001px]:flex min-[1001px]:flex-row min-[1001px]:items-center min-[1001px]:gap-12 min-[1001px]:space-y-0">
+								<div class="flex-1 md:pl-2">
+									<img
+										src="/images/illustrations/rectangle-1.webp"
+										alt="Cleric investigation detail"
+										class="w-full h-auto object-contain"
+									/>
+								</div>
+								<div class="w-[480px] text-left max-[1000px]:w-full max-[770px]:w-full">
+									<h3 class="font-gt-alpina text-[40px] font-normal leading-[1.2] text-[#313131] max-[1000px]:text-[36px] max-[770px]:text-[32px]">
+										Trust but verify
+									</h3>
+									<p class="mt-4 font-cleric-text text-[18px] font-light leading-[1.4] tracking-[0%] text-[#6B6B6B] max-[1000px]:text-[17px] max-[770px]:text-[16px]">
+										See exactly how Cleric reached its conclusions so you can trust the diagnosis and move to
+										resolution.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="rounded-[16px] border border-[#EAEAEA] bg-[#FAFAFA] p-8 md:p-10 lg:p-12 !pr-0">
+							<div class="block space-y-10 min-[1001px]:flex min-[1001px]:flex-row min-[1001px]:items-center min-[1001px]:gap-12 min-[1001px]:space-y-0">
+								<div class="w-[480px] text-left max-[1000px]:w-full max-[770px]:w-full">
 									
-								</span>
+									<h3 class="font-gt-alpina text-[40px] font-normal leading-[1.2] text-[#313131] max-[1000px]:text-[36px] max-[770px]:text-[32px]">
+										Ship a fix
+									</h3>
+									<p class="mt-4 font-cleric-text text-[18px] font-light leading-[1.4] tracking-[0%] text-[#6B6B6B] max-[1000px]:text-[17px] max-[770px]:text-[16px]">
+										Work with Cleric to ship fixes by asking questions, giving instructions, and collaborating
+										until the issue is resolved.
+									</p>
+									<p class="font-cleric-text mt-[19px] text-[14px] font-light leading-[1.45] tracking-[0%] text-[#6B6B6B]">
+										<span class="inline-flex items-center gap-2">
+											Works inside your
+											<img src="/images/icons/slack-logo.svg" alt="Slack" class="h-4 w-auto" />
+										</span>
+									</p>
+								</div>
+								<div class="flex-1 md:pr-2">
+									<img
+										src="/images/illustrations/rectangle-3.webp"
+										alt="Cleric ship a fix"
+										class="w-full h-auto object-contain"
+									/>
+								</div>
+							</div>
+						</div>
+
+						<div class="rounded-[16px] border border-[#EAEAEA] bg-[#FAFAFA] p-8 md:p-10 lg:p-12 !pl-0">
+							<div class="block space-y-10 min-[1001px]:flex min-[1001px]:flex-row min-[1001px]:items-center min-[1001px]:gap-12 min-[1001px]:space-y-0">
+								<div class="flex-1 md:pl-2">
+									<img
+										src="/images/illustrations/rectangle-4.webp"
+										alt="Cleric learns from failure"
+										class="w-full h-auto object-contain"
+									/>
+								</div>
+								<div class="w-[480px] text-left max-[1000px]:w-full max-[770px]:w-full">
+									<h3 class="font-gt-alpina text-[40px] font-normal leading-[1.2] text-[#313131] max-[1000px]:text-[36px] max-[770px]:text-[32px]">
+										Learns from failure
+									</h3>
+									<p class="mt-4 font-cleric-text text-[18px] font-light leading-[1.4] tracking-[0%] text-[#6B6B6B] max-[1000px]:text-[17px] max-[770px]:text-[16px]">
+										Engineers leave, context doesn’t. Every resolution becomes institutional knowledge your
+										whole team can use.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="w-full bg-white flex justify-center pt-[80px] pb-[160px]" data-section="the-hood">
+				<div class="w-full max-w-[1192px] max-[992px]:max-w-[642px] lg:max-w-[1040px] xl:max-w-[1192px]">
+					<div class="flex w-full flex-col items-center gap-4 text-center mb-16">
+						<span class="font-cleric-text inline-flex items-center justify-center rounded-[4px] bg-[#E0E0E0] px-[16px] py-[10px] text-center text-[14px] font-normal leading-[1.2] tracking-[-0.25%] text-[#6B6B6B]">
+							Under the hood
+						</span>
+						<h2 class="font-gt-alpina text-[48px] font-normal leading-[1.15] tracking-[-0.5%] text-center text-[#313131] max-[1000px]:text-[44px] max-[770px]:text-[36px]">
+							Simple on the surface. Serious underneath.
+						</h2>
+						<p class="font-cleric-text text-[24px] font-light leading-[1.25] tracking-[0.75%] text-[#6B6B6B] max-[1000px]:text-[20px] max-[770px]:text-[20px]">
+							Three purpose-built systems that turn alerts into answers—and make every investigation faster than the last.
+						</p>
+					</div>
+
+					<div class="block w-full max-w-[1192px] space-y-6 mb-8 min-[1001px]:grid min-[1001px]:grid-cols-2 min-[1001px]:gap-8 min-[1001px]:space-y-0">
+						<div class="rounded-[16px] border border-[#EAEAEA] bg-[#F8F8F8] p-8 md:p-10">
+							<h3 class="font-gt-alpina text-[32px] font-normal leading-[1.2] tracking-[0%] text-[#313131] max-[1000px]:text-[30px] max-[770px]:text-[28px]">
+								Maps your world
+							</h3>
+							<p class="mt-4 font-cleric-text text-[18px] font-light leading-[1.4] tracking-[0%] text-[#6B6B6B] max-[1000px]:text-[20px] max-[770px]:text-[16px]">
+								Services, dependencies, and ownership mapped automatically. When something breaks, Cleric knows where to look.
+							</p>
+							<div class="mt-8">
+								<img
+									src="/images/illustrations/enviroments1.webp"
+									alt="Maps your world"
+									class="w-full h-auto object-contain"
+								/>
+							</div>
+						</div>
+
+						<div class="rounded-[16px] border border-[#EAEAEA] bg-[#F8F8F8] p-8 md:p-10">
+							<h3 class="font-gt-alpina text-[32px] font-normal leading-[1.2] tracking-[0%] text-[#313131] max-[1000px]:text-[30px] max-[770px]:text-[28px]">
+								Tests every theory
+							</h3>
+							<p class="mt-4 font-cleric-text text-[18px] font-light leading-[1.4] tracking-[0%] text-[#6B6B6B] max-[1000px]:text-[20px] max-[770px]:text-[16px]">
+								Correlates signals, tests hypotheses in parallel, tracks confidence. Systematic elimination, not guesswork.
+							</p>
+							<div class="relative mt-8">
+								<img
+									src="/images/illustrations/enviroments2.webp"
+									alt="Tests every theory"
+									class="w-full h-auto object-contain"
+								/>
+								<div
+									class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(247,249,250,0)_0%,#F7F9FA_100%),linear-gradient(90deg,#F7F9FA_0%,rgba(247,249,250,0)_20%),linear-gradient(270deg,#F7F9FA_0%,rgba(247,249,250,0)_20%)]"
+									aria-hidden="true"
+								></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="w-full max-w-[1192px] rounded-[16px] border border-[#EAEAEA] bg-[#F8F8F8]">
+						<div class="flex w-[560px] flex-col gap-4 pt-12 pl-12 max-[1000px]:w-full max-[1000px]:px-6 max-[770px]:w-full max-[770px]:px-6">
+							<h3 class="font-gt-alpina text-[32px] font-normal leading-[1.2] tracking-[0%] text-[#313131] max-[1000px]:text-[30px] max-[770px]:text-[28px]">
+								Compounds over time
+							</h3>
+							<p class="font-cleric-text text-[18px] font-light leading-[1.4] tracking-[0%] text-[#6B6B6B] max-[1000px]:text-[20px] max-[770px]:text-[16px]">
+								Every fix teaches Cleric something new. Patterns and context accumulate automatically.
+							</p>
+						</div>
+
+						<div class="mt-8">
+							<img
+								src="/images/illustrations/compounds-over-time.webp"
+								alt="Compounds over time"
+								class="w-full h-auto object-contain"
+							/>
+						</div>
+					</div>
+
+					<a
+						href="#"
+						class="font-cleric-text mt-10 mx-auto flex w-[198px] items-center justify-center gap-2 rounded-[150px] bg-black px-[24px] py-[10px] text-center text-[15px] font-light leading-[1.4] tracking-[0%] text-white"
+					>
+						Explore Full Platform
+					</a>
+				</div>
+			</section>
+
+
+			<section class="w-full bg-[linear-gradient(0deg,#F8F8F8_-0.04%,#F7F9FA_100%)] flex justify-center pt-[120px] pb-[80px] px-4 max-[992px]:px-6 lg:px-0" data-section="by-design">
+				<div class="mx-auto block w-full max-w-[1192px] max-[992px]:max-w-[642px] min-[1001px]:flex min-[1001px]:items-center lg:max-w-[1040px] xl:max-w-[1192px]">
+					<div class="flex w-[560px] max-w-[560px] flex-col items-start gap-6 text-left max-[1000px]:w-full max-[770px]:w-full" data-section="security-first">
+						<span class="font-cleric-text inline-flex items-center justify-center rounded-[4px] bg-[#E0E0E0] px-[16px] py-[10px] text-center text-[14px] font-normal leading-[1.2] tracking-[-0.25%] text-[#6B6B6B]">
+						Security-first
+						</span>
+						<h2 class="font-gt-alpina text-[48px] font-normal leading-[1.15] tracking-[-0.5%] text-center text-[#313131] max-[1000px]:text-[44px] max-[770px]:text-[36px]">
+							Paranoid by design
+						</h2>
+						<p class="mt-4 font-cleric-text text-[18px] font-light leading-[1.4] tracking-[0%] text-[#6B6B6B] max-[1000px]:text-[20px] max-[770px]:text-[16px]">
+							Read-only by default. Every action logged, every investigation auditable. Your data encrypted
+							everywhere and never used for training.
+						</p>
+						<p class="font-cleric-text text-[15px] font-light leading-[1.4] tracking-[0%] align-middle text-[#313131]">
+							Learn more in our
+							<span class="inline-flex items-center gap-1">
+								<a href="#" class="font-cleric-text text-[15px] font-normal leading-[1.4] tracking-[0%] align-middle underline">
+									Trust Center
+								</a>
+								<img src="/images/icons/vector.svg" alt="" aria-hidden="true" class="h-[6.6667px] w-[6.6667px] brightness-0" />
+							</span>
+						</p>
+					</div>
+					<div class="flex w-[592px] h-[468.6667px] flex-shrink-0 max-[1000px]:w-[500px] max-[1000px]:h-[395.8333px] max-[1000px]:max-w-[500px] max-[1000px]:max-h-[395.83px] max-[770px]:w-[408px] max-[770px]:h-[323px] max-[770px]:max-w-[500px] max-[770px]:max-h-[395.83px]">
+						<img
+							src="/images/illustrations/security.webp"
+							alt="Security overview"
+							class="h-full w-full object-contain"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section class="w-full flex justify-center pt-[160px] pb-[80px] px-4 max-[992px]:px-6 lg:px-0" data-section="integrations">
+				<div class="mx-auto w-full max-w-[1192px] items-center max-[992px]:max-w-[642px] lg:max-w-[1040px] xl:max-w-[1192px]">
+					<div class="flex w-full flex-col items-center gap-6 text-center mb-16">
+						<span class="font-cleric-text inline-flex items-center justify-center rounded-[4px] bg-[#E0E0E0] px-[16px] py-[10px] text-center text-[14px] font-normal leading-[1.2] tracking-[-0.25%] text-[#6B6B6B]">
+							Integrations
+						</span>
+						<h2 class="font-gt-alpina text-[48px] font-normal leading-[1.15] tracking-[-0.5%] text-center text-[#313131] max-[1000px]:text-[44px] max-[770px]:text-[36px]">
+							Built to plug right into your stack
+						</h2>
+						<p class="font-cleric-text text-[24px] font-light leading-[1.25] tracking-[0.75%] text-[#6B6B6B] max-[1000px]:text-[20px] max-[770px]:text-[20px]">
+							Connect your whole stack in an afternoon. Read access by default, write access when you're ready.
+						</p>
+					</div>
+
+					<div class="w-full max-w-[1192px]">
+						<picture>
+							<source
+								srcset="/images/icons/integrations/integrations-group-icon-mob.webp"
+								media="(max-width: 678px)"
+							/>
+							<source
+								srcset="/images/icons/integrations/integrations-group-icon-tablete.webp"
+								media="(max-width: 1000px)"
+							/>
+							<img
+								src="/images/icons/integrations/integrations-group-icon-comp.webp"
+								alt="Integrations"
+								class="mx-auto w-full"
+							/>
+						</picture>
+
+						<p class="mx-auto mt-16 flex w-full items-center justify-center gap-1 text-center font-cleric-text text-[15px] font-light leading-[1.4] tracking-[0%] text-[#313131]">
+						  <span>Learn more in our</span>
+						  <a href="#" class="font-cleric-text text-[15px] font-normal leading-[1.4] tracking-[0%] underline">
+						    Trust Center
+						  </a>
+						  <img src="/images/icons/vector.svg" alt="" aria-hidden="true" class="h-[6.6667px] w-[6.6667px] brightness-0" />
+						</p>
+
+
+
+
+					</div>
+				</div>
+			</section>
+
+			<section class="w-full flex justify-center pt-[160px] pb-[80px] px-4 max-[992px]:px-6 lg:px-0" data-section="your-engineers">
+				<div class="mx-auto w-full max-w-[1192px] items-center max-[992px]:max-w-[642px] lg:max-w-[1040px] xl:max-w-[1192px]">
+					<div class="relative overflow-hidden rounded-[24px]">
+						<img
+							src="/images/illustrations/bg-engineers-desktop.webp"
+							alt=""
+							aria-hidden="true"
+							class="absolute inset-0 h-full w-full object-cover"
+						/>
+						<div
+							class="relative z-10 flex w-[650px] flex-col gap-12 pt-[120px] pb-[120px] pl-[120px] pr-0 text-white max-[1000px]:w-[440px] max-[1000px]:gap-[56px] max-[1000px]:pt-[160px] max-[1000px]:pb-[160px] max-[1000px]:pl-[48px] max-[1000px]:pr-0 max-[770px]:w-[90%] max-[770px]:gap-12 max-[770px]:pl-[32px] max-[770px]:pr-0 max-[770px]:py-[100px]"
+							data-section="unblock-your-engineers"
+						>
+							<h2 class="font-gt-alpina text-[48px] font-medium leading-[1.15] tracking-[-3%] text-white max-[1000px]:text-[40px] max-[770px]:text-[36px]">
+								Unblock your engineers. Start in minutes.
+							</h2>
+							<p class="font-cleric-text text-[24px] font-light leading-[1.25] tracking-[0.75%] text-white max-[1000px]:text-[20px] max-[770px]:text-[18px]">
+								Setup takes minutes. Read-only by default.
+							</p>
+							<div class="flex flex-wrap gap-[22px]">
+								<a
+									href="/try-it-out"
+									class="font-cleric-text inline-flex w-[160px] min-w-[160px] items-center justify-center gap-2 rounded-[150px] bg-white px-[24px] py-[10px] text-[15px] font-medium leading-[1.4] text-[#313131]"
+								>
+									Start for free
+								</a>
+								<a
+									href="#"
+									class="font-cleric-text inline-flex h-[41px] w-[160px] min-w-[160px] items-center justify-center gap-2 rounded-[150px] border border-white/60 bg-white/5 px-[24px] py-[10px] text-[15px] font-medium leading-[1.4] text-white"
+								>
+									Request Demo
+								</a>
 							</div>
 						</div>
 					</div>
@@ -378,73 +704,46 @@ bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_80%)]"></div>
 			</section>
 
 
-
-
-
-
-
-			
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-
-
-
-
-
-
-			
-			<footer class="w-full bg-white py-12">
-				<div class="mx-auto w-full max-w-[1200px] px-0 max-[1100px]:hidden">
-					<div class="grid h-[344px] grid-cols-12 grid-rows-2 gap-x-6 gap-y-16 max-[992px]:mx-auto max-[992px]:w-[834px] max-[992px]:grid-cols-6 max-[992px]:gap-y-10 max-[992px]:justify-items-center max-[768px]:mx-0 max-[768px]:h-auto max-[768px]:w-full max-[768px]:block max-[768px]:gap-y-8 max-[768px]:px-4 max-[768px]:pt-6 max-[768px]:pb-10">
-						<div class="col-span-3 row-span-1 row-start-1 h-[167px] w-[280px] gap-6 pt-6 max-[992px]:col-span-1 max-[992px]:h-[211px] max-[992px]:w-[87px] max-[992px]:gap-6 max-[992px]:pt-6 max-[768px]:order-1 max-[768px]:h-auto max-[768px]:w-auto max-[768px]:pt-0 max-[768px]:justify-self-start max-[768px]:mb-8">
+			<footer class="w-full bg-white py-12 flex justify-center">
+				<div class="w-full max-w-[1192px] max-[992px]:max-w-[642px] lg:max-w-[1040px] xl:max-w-[1192px] px-4 max-[992px]:px-6 lg:px-0">
+					<div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+						<div class="flex-shrink-0 w-[280px] max-w-full">
 							<img src="/images/logo/logo-footer.svg" alt="Cleric" class="h-[33px] w-[29px]" />
 						</div>
-						<div class="col-span-9 row-span-1 row-start-1 h-[167px] w-[887.9999px] gap-6 pt-6 max-[1210px]:w-[-webkit-fill-available] max-[1210px]:max-w-[-webkit-fill-available] max-[992px]:col-span-5 max-[992px]:col-start-2 max-[992px]:h-auto max-[992px]:w-auto max-[768px]:order-2 max-[768px]:col-span-1 max-[768px]:col-start-1 max-[768px]:w-full max-[768px]:pt-0 max-[768px]:justify-self-start">
-							<div class="grid grid-cols-3 gap-6 max-[992px]:w-[531px] max-[992px]:gap-4 max-[768px]:w-full max-[768px]:grid-cols-2 max-[768px]:gap-x-8 max-[768px]:gap-y-10 max-[768px]:justify-items-start">
-								<div class="footer-links font-cleric-text text-left w-full min-w-0 gap-6 max-[1210px]:w-[230px] max-[768px]:gap-4">
-									<h4 class="text-[15px] font-semibold text-[#0B1A3A]">Cleric</h4>
-									<ul class="mt-4 space-y-3 text-[15px] font-normal text-[#0B1A3A]">
-										<li><a href="#">About</a></li>
-										<li><a href="#">Careers</a></li>
-										<li><a href="#">Product</a></li>
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Webinars</a></li>
-									</ul>
-								</div>
-								<div class="footer-links font-cleric-text text-left w-full min-w-0 gap-6 max-[1210px]:w-[230px] max-[768px]:gap-4">
-									<h4 class="text-[15px] font-semibold text-[#0B1A3A]">Help &amp; Security</h4>
-									<ul class="mt-4 space-y-3 text-[15px] font-normal text-[#0B1A3A]">
-										<li><a href="#">Trust Center</a></li>
-										<li><a href="#">Terms of Use</a></li>
-										<li><a href="#">Privacy Policy</a></li>
-									</ul>
-								</div>
-								<div class="footer-links font-cleric-text text-left w-full min-w-0 gap-6 max-[1210px]:w-[230px] max-[768px]:col-span-2">
-									<h4 class="text-[15px] font-semibold text-[#0B1A3A]">Use Cases</h4>
-									<ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-[15px] font-normal text-[#0B1A3A] md:grid-cols-1">
-										<li><a href="#">Alert Investigation</a></li>
-										<li><a href="#">Root Cause Analysis</a></li>
-										<li><a href="#">Fix Recommendation</a></li>
-										<li><a href="#">On-Call Automation</a></li>
-										<li><a href="#">Incident Triage</a></li>
-										<li><a href="#">Deployment Failures</a></li>
-									</ul>
-								</div>
+						<div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+							<div class="footer-links font-cleric-text text-left w-full min-w-0">
+								<h4 class="text-[15px] font-semibold text-[#0B1A3A]">Cleric</h4>
+								<ul class="mt-4 space-y-3 text-[15px] font-normal text-[#0B1A3A]">
+									<li><a href="#">About</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Product</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Webinars</a></li>
+								</ul>
+							</div>
+							<div class="footer-links font-cleric-text text-left w-full min-w-0">
+								<h4 class="text-[15px] font-semibold text-[#0B1A3A]">Help &amp; Security</h4>
+								<ul class="mt-4 space-y-3 text-[15px] font-normal text-[#0B1A3A]">
+									<li><a href="#">Trust Center</a></li>
+									<li><a href="#">Terms of Use</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+							<div class="footer-links font-cleric-text text-left w-full min-w-0">
+								<h4 class="text-[15px] font-semibold text-[#0B1A3A]">Use Cases</h4>
+								<ul class="mt-4 space-y-3 text-[15px] font-normal text-[#0B1A3A]">
+									<li><a href="#">Alert Investigation</a></li>
+									<li><a href="#">Root Cause Analysis</a></li>
+									<li><a href="#">Fix Recommendation</a></li>
+									<li><a href="#">On-Call Automation</a></li>
+									<li><a href="#">Incident Triage</a></li>
+									<li><a href="#">Deployment Failures</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="grid grid-cols-12 items-center max-[992px]:mx-auto max-[992px]:w-[834px] max-[992px]:grid-cols-6 max-[992px]:gap-x-6 max-[992px]:justify-items-center max-[768px]:mx-0 max-[768px]:w-full max-[768px]:flex max-[768px]:flex-col max-[768px]:items-center max-[768px]:gap-4">
-						<div class="col-span-3 row-start-2 flex items-center gap-4 max-[992px]:col-span-1 max-[992px]:col-start-1 max-[992px]:w-[87px] max-[992px]:gap-4 max-[768px]:w-auto max-[768px]:justify-center">
+					<div class="mt-10 flex flex-col items-center gap-4 border-t border-[#EAEAEA] pt-6 sm:flex-row sm:justify-between">
+						<div class="flex items-center gap-4">
 							<a href="#" aria-label="LinkedIn">
 								<img src="/images/icons/in.svg" alt="" aria-hidden="true" class="h-[18px] w-[18px] opacity-60" />
 							</a>
@@ -452,7 +751,7 @@ bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_80%)]"></div>
 								<img src="/images/icons/twitter.svg" alt="" aria-hidden="true" class="h-[18px] w-[20px] opacity-60" />
 							</a>
 						</div>
-						<div class="col-span-3 col-start-4 row-start-2 font-cleric-text text-[15px] font-normal leading-[1.4] text-[#939393] max-[992px]:col-span-5 max-[992px]:col-start-2 max-[992px]:w-[531px] max-[992px]:justify-self-center max-[992px]:text-left max-[768px]:w-auto max-[768px]:text-center">
+						<div class="font-cleric-text text-[15px] font-normal leading-[1.4] text-[#939393] text-center sm:text-left">
 							© Cleric 2025
 						</div>
 					</div>

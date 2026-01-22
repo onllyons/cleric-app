@@ -1,0 +1,18 @@
+/Users/sergheicondratiuc/Desktop/cleric-app/PDF-CLIENT/AstroJS.pdf
+
+
+SVG pentru icon‑uri, logo‑uri, forme vectoriale, ilustratii simple (scalare perfectă).
+PNG pentru elemente cu transparență sau efecte complexe (shadow/blur), exportat la 2x.
+JPG (sau WebP) pentru fotografii/imagini mari fără transparență.
+
+
+
+
+
+
+
+
+
+
+cleric-app/public/images/icons/
+cleric-app/public/images/backgrounds/

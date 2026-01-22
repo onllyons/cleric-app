@@ -1,0 +1,43 @@
+TRY IT OUT – CERINTA TEHNICA (pas cu pas)
+
+1) Buton pe homepage
+- Adaugă buton “Try it out” pe homepage.
+- La click, deschide wizard-ul (nu redirect extern).
+
+2) Wizard în 2 pași (implementare proprie)
+- Poți alege:
+  a) modal peste homepage, sau
+  b) pagină separată /try-it-out
+- Trebuie să fie 2 ecrane cu Next/Back.
+
+3) Câmpuri minimale (suficiente pentru test)
+Pas 1:
+- name (text)
+- email (email)
+- company (text)
+Pas 2:
+- role (text)
+- team_size (select / text)
+- use_case (textarea)
+
+4) Navigare
+- “Next” trece la pasul 2.
+- “Back” revine la pasul 1.
+- “Submit” la final.
+
+5) Submit către webhook.site
+- La Submit, trimiți datele prin POST la:
+  https://webhook.site/[ID-ul-tau]
+- Folosește FormData și fetch:
+
+  const formData = new FormData(formEl);
+  await fetch("https://webhook.site/ID", { method: "POST", body: formData });
+
+6) Confirmare
+- După submit, arată un mesaj “Thanks” sau “Submitted”.
+- Verifică în webhook.site că au ajuns datele.
+
+7) Ce NU faci
+- Nu redirect către signup.hq.cleric.ai
+- Nu backend real
+- Nu “Book a demo”

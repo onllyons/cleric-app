@@ -1,0 +1,651 @@
+---
+// src/pages/try-it-out.astro
+import "../styles/global.css";
+import "../styles/try-it-out.css";
+import tryItOutUrl from "../scripts/try-it-out.ts?url";
+---
+<html lang="ro">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Try It Out</title>
+   </head>
+   <body class="try-it-out-page h-screen overflow-hidden bg-white">
+      <section class="w-full h-screen">
+         <div class="flex w-full h-screen max-[1250px]:flex-col">
+
+            <!-- STÂNGA -->
+            <div
+               id="tryItOutScroll"
+               class="w-1/2 h-screen overflow-y-auto overflow-x-hidden max-[1250px]:w-full max-[1250px]:h-auto max-[1250px]:overflow-visible">
+               <div class="py-8 px-16 max-[768px]:px-6">
+                  <img id="tryItOutLogo" src="/images/logo/logo-dark.svg" class="mb-8 h-6 w-auto" />
+                  <div class="w-full max-w-md">
+                     
+                     <div class="mb-6">
+                          
+                        <div class="space-y-6" data-tryitout-form id="form-sect-1">
+                           <h1 class="text-[30px] leading-[2.25rem] font-[500] tracking-[-0.025em] mb-3">
+                              Select your stack
+                           </h1>
+                           <p class="mb-8 text-[16px] font-[400] text-[#71717a]">
+                              Select your stack to see if Cleric is a fit. If it is, get 4 weeks free.
+                           </p>
+                           <div class="space-y-3">
+                              <h4 class="text-sm font-medium">
+                                 Communication<!-- --> <span class="text-red-500">*</span>
+                              </h4>
+                              <div class="grid grid-cols-2 gap-2">
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="radio" id="comm-slack" class="sr-only peer" name="communication" value="slack">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Slack" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/slack-colored.png"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Slack</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="radio" id="comm-teams" class="sr-only peer" name="communication" value="teams">
+                                    <div class="flex-shrink-0 ml-2.5">
+                                       <svg class="h-4 w-auto" viewBox="0 0 2228.833 2073.333" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill="#5059C9" d="M1554.637,777.5h575.713c54.391,0,98.483,44.092,98.483,98.483c0,0,0,0,0,0v524.398c0,199.901-162.051,361.952-361.952,361.952h0h-1.711c-199.901,0.028-361.975-162-362.004-361.901c0-0.017,0-0.034,0-0.052V828.971C1503.167,800.544,1526.211,777.5,1554.637,777.5L1554.637,777.5z"></path>
+                                          <circle fill="#5059C9" cx="1943.75" cy="440.583" r="233.25"></circle>
+                                          <circle fill="#7B83EB" cx="1218.083" cy="336.917" r="336.917"></circle>
+                                          <path fill="#7B83EB" d="M1667.323,777.5H717.01c-53.743,1.33-96.257,45.931-95.01,99.676v598.105c-7.505,322.519,247.657,590.16,570.167,598.053c322.51-7.893,577.671-275.534,570.167-598.053V877.176C1763.579,823.431,1721.066,778.83,1667.323,777.5z"></path>
+                                          <path opacity=".1" d="M1244,777.5v838.145c-0.258,38.435-23.549,72.964-59.09,87.598c-11.316,4.787-23.478,7.254-35.765,7.257H667.613c-6.738-17.105-12.958-34.21-18.142-51.833c-18.144-59.477-27.402-121.307-27.472-183.49V877.02c-1.246-53.659,41.198-98.19,94.855-99.52H1244z"></path>
+                                          <path opacity=".2" d="M1192.167,777.5v889.978c-0.002,12.287-2.47,24.449-7.257,35.765c-14.634,35.541-49.163,58.833-87.598,59.09H691.975c-8.812-17.105-17.105-34.21-24.362-51.833c-7.257-17.623-12.958-34.21-18.142-51.833c-18.144-59.476-27.402-121.307-27.472-183.49V877.02c-1.246-53.659,41.198-98.19,94.855-99.52H1192.167z"></path>
+                                          <path opacity=".2" d="M1192.167,777.5v786.312c-0.395,52.223-42.632,94.46-94.855,94.855h-447.84c-18.144-59.476-27.402-121.307-27.472-183.49V877.02c-1.246-53.659,41.198-98.19,94.855-99.52H1192.167z"></path>
+                                          <path opacity=".2" d="M1140.333,777.5v786.312c-0.395,52.223-42.632,94.46-94.855,94.855H649.472c-18.144-59.476-27.402-121.307-27.472-183.49V877.02c-1.246-53.659,41.198-98.19,94.855-99.52H1140.333z"></path>
+                                          <path opacity=".1" d="M1244,509.522v163.275c-8.812,0.518-17.105,1.037-25.917,1.037c-8.812,0-17.105-0.518-25.917-1.037c-17.496-1.161-34.848-3.937-51.833-8.293c-104.963-24.857-191.679-98.469-233.25-198.003c-7.153-16.715-12.706-34.071-16.587-51.833h258.648C1201.449,414.866,1243.801,457.217,1244,509.522z"></path>
+                                          <path opacity=".2" d="M1192.167,561.355v111.442c-17.496-1.161-34.848-3.937-51.833-8.293c-104.963-24.857-191.679-98.469-233.25-198.003h190.228C1149.616,466.699,1191.968,509.051,1192.167,561.355z"></path>
+                                          <path opacity=".2" d="M1192.167,561.355v111.442c-17.496-1.161-34.848-3.937-51.833-8.293c-104.963-24.857-191.679-98.469-233.25-198.003h190.228C1149.616,466.699,1191.968,509.051,1192.167,561.355z"></path>
+                                          <path opacity=".2" d="M1140.333,561.355v103.148c-104.963-24.857-191.679-98.469-233.25-198.003h138.395C1097.783,466.699,1140.134,509.051,1140.333,561.355z"></path>
+                                          <linearGradient id="teams-grad" gradientUnits="userSpaceOnUse" x1="198.099" y1="1683.0726" x2="942.2344" y2="394.2607" gradientTransform="matrix(1 0 0 -1 0 2075.3333)">
+                                             <stop offset="0" stop-color="#5a62c3"></stop>
+                                             <stop offset=".5" stop-color="#4d55bd"></stop>
+                                             <stop offset="1" stop-color="#3940ab"></stop>
+                                          </linearGradient>
+                                          <path fill="url(#teams-grad)" d="M95.01,466.5h950.312c52.473,0,95.01,42.538,95.01,95.01v950.312c0,52.473-42.538,95.01-95.01,95.01H95.01c-52.473,0-95.01-42.538-95.01-95.01V561.51C0,509.038,42.538,466.5,95.01,466.5z"></path>
+                                          <path fill="#FFF" d="M820.211,828.193H630.241v517.297H509.211V828.193H320.123V727.844h500.088V828.193z"></path>
+                                       </svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Teams</h5>
+                                       <div class="inline-flex items-center gap-0.5 rounded-full border border-transparent bg-gray-100 px-1.5 py-0 text-[9px] font-medium text-gray-600 whitespace-nowrap">Coming soon</div>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="space-y-3">
+                              <h4 class="text-sm font-medium">
+                                 Logs (select all that apply)<!-- --> 
+                              </h4>
+                              <div class="grid grid-cols-2 gap-2">
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="log-datadog-logs" class="sr-only peer" name="logs" value="datadog-logs">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Datadog" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/datadog-colored.svg"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Datadog</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="log-loki" class="sr-only peer" name="logs" value="loki">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Loki" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/grafana-colored.png"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Loki</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="log-elasticsearch" class="sr-only peer" name="logs" value="elasticsearch">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Elasticsearch" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/elasticsearch-colored.ico"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Elasticsearch</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="log-cloudwatch-logs" class="sr-only peer" name="logs" value="cloudwatch-logs">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="CloudWatch" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/aws.webp"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">CloudWatch</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="log-gcp-logs" class="sr-only peer" name="logs" value="gcp-logs">
+                                    <div class="flex-shrink-0 ml-2.5">
+                                       <svg class="h-4 w-auto" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill="#ea4535" d="M80.6 40.3h.4l-.2-.2 14-14v-.3c-11.8-10.4-28.1-14-43.2-9.5C36.5 20.8 24.9 32.8 20.7 48c.2-.1.5-.2.8-.2 5.2-3.4 11.4-5.4 17.9-5.4 2.2 0 4.3.2 6.4.6.1-.1.2-.1.3-.1 9-9.9 24.2-11.1 34.6-2.6h-.1z"></path>
+                                          <path fill="#557ebf" d="M108.1 47.8c-2.3-8.5-7.1-16.2-13.8-22.1L80 39.9c6 4.9 9.5 12.3 9.3 20v2.5c16.9 0 16.9 25.2 0 25.2H63.9v20h-.1l.1.2h25.4c14.6.1 27.5-9.3 31.8-23.1 4.3-13.8-1-28.8-13-36.9z"></path>
+                                          <path fill="#36a852" d="M39 107.9h26.3V87.7H39c-1.9 0-3.7-.4-5.4-1.1l-15.2 14.6v.2c6 4.3 13.2 6.6 20.7 6.6z"></path>
+                                          <path fill="#f9bc15" d="M40.2 41.9c-14.9.1-28.1 9.3-32.9 22.8-4.8 13.6 0 28.5 11.8 37.3l15.6-14.9c-8.6-3.7-10.6-14.5-4-20.8 6.6-6.4 17.8-4.4 21.7 3.8L68 55.2C61.4 46.9 51.1 42 40.2 42.1z"></path>
+                                       </svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">GCP Logging</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="log-splunk" class="sr-only peer" name="logs" value="splunk">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Splunk" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/splunk.ico"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Splunk</h5>
+                                       <div class="inline-flex items-center gap-0.5 rounded-full border border-transparent bg-gray-100 px-1.5 py-0 text-[9px] font-medium text-gray-600 whitespace-nowrap">Coming soon</div>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="space-y-3">
+                              <h4 class="text-sm font-medium">
+                                 Infrastructure (select all that apply)<!-- --> 
+                              </h4>
+                              <div class="grid grid-cols-2 gap-2">
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="infra-kubernetes" class="sr-only peer" name="infrastructure" value="kubernetes">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Kubernetes" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/kubernetes-colored.png"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Kubernetes</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="infra-aws" class="sr-only peer" name="infrastructure" value="aws">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Amazon Web Services" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/aws.webp"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Amazon Web Services</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label id="infra-ecs-wrap" class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b] hidden" hidden>
+                                    <input type="checkbox" id="infra-ecs" class="sr-only peer" name="infrastructure" value="ecs">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Amazon ECS" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/aws.webp"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">ECS</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="infra-gcp" class="sr-only peer" name="infrastructure" value="gcp">
+                                    <div class="flex-shrink-0 ml-2.5">
+                                       <svg class="h-4 w-auto" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill="#ea4535" d="M80.6 40.3h.4l-.2-.2 14-14v-.3c-11.8-10.4-28.1-14-43.2-9.5C36.5 20.8 24.9 32.8 20.7 48c.2-.1.5-.2.8-.2 5.2-3.4 11.4-5.4 17.9-5.4 2.2 0 4.3.2 6.4.6.1-.1.2-.1.3-.1 9-9.9 24.2-11.1 34.6-2.6h-.1z"></path>
+                                          <path fill="#557ebf" d="M108.1 47.8c-2.3-8.5-7.1-16.2-13.8-22.1L80 39.9c6 4.9 9.5 12.3 9.3 20v2.5c16.9 0 16.9 25.2 0 25.2H63.9v20h-.1l.1.2h25.4c14.6.1 27.5-9.3 31.8-23.1 4.3-13.8-1-28.8-13-36.9z"></path>
+                                          <path fill="#36a852" d="M39 107.9h26.3V87.7H39c-1.9 0-3.7-.4-5.4-1.1l-15.2 14.6v.2c6 4.3 13.2 6.6 20.7 6.6z"></path>
+                                          <path fill="#f9bc15" d="M40.2 41.9c-14.9.1-28.1 9.3-32.9 22.8-4.8 13.6 0 28.5 11.8 37.3l15.6-14.9c-8.6-3.7-10.6-14.5-4-20.8 6.6-6.4 17.8-4.4 21.7 3.8L68 55.2C61.4 46.9 51.1 42 40.2 42.1z"></path>
+                                       </svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight whitespace-nowrap shrink-0">Google Cloud Platform</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="infra-azure" class="sr-only peer" name="infrastructure" value="azure">
+                                    <div class="flex-shrink-0 ml-2.5">
+                                       <svg class="h-4 w-auto" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                                          <defs>
+                                             <linearGradient id="azure-grad-1" x1="-1032.172" x2="-1059.213" y1="145.312" y2="65.426" gradientTransform="matrix(1 0 0 -1 1075 158)" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0" stop-color="#114a8b"></stop>
+                                                <stop offset="1" stop-color="#0669bc"></stop>
+                                             </linearGradient>
+                                             <linearGradient id="azure-grad-2" x1="-1023.725" x2="-1029.98" y1="108.083" y2="105.968" gradientTransform="matrix(1 0 0 -1 1075 158)" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0" stop-opacity=".3"></stop>
+                                                <stop offset=".071" stop-opacity=".2"></stop>
+                                                <stop offset=".321" stop-opacity=".1"></stop>
+                                                <stop offset=".623" stop-opacity=".05"></stop>
+                                                <stop offset="1" stop-opacity="0"></stop>
+                                             </linearGradient>
+                                             <linearGradient id="azure-grad-3" x1="-1027.165" x2="-997.482" y1="147.642" y2="68.561" gradientTransform="matrix(1 0 0 -1 1075 158)" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0" stop-color="#3ccbf4"></stop>
+                                                <stop offset="1" stop-color="#2892df"></stop>
+                                             </linearGradient>
+                                          </defs>
+                                          <path fill="url(#azure-grad-1)" d="M33.338 6.544h26.038l-27.03 80.087a4.152 4.152 0 0 1-3.933 2.824H8.149a4.145 4.145 0 0 1-3.928-5.47L29.404 9.368a4.152 4.152 0 0 1 3.934-2.825z"></path>
+                                          <path fill="#0078d4" d="M71.175 60.261h-41.29a1.911 1.911 0 0 0-1.305 3.309l26.532 24.764a4.171 4.171 0 0 0 2.846 1.121h23.38z"></path>
+                                          <path fill="url(#azure-grad-2)" d="M33.338 6.544a4.118 4.118 0 0 0-3.943 2.879L4.252 83.917a4.14 4.14 0 0 0 3.908 5.538h20.787a4.443 4.443 0 0 0 3.41-2.9l5.014-14.777 17.91 16.705a4.237 4.237 0 0 0 2.666.972H81.24L71.024 60.261l-29.781.007L59.47 6.544z"></path>
+                                          <path fill="url(#azure-grad-3)" d="M66.595 9.364a4.145 4.145 0 0 0-3.928-2.82H33.648a4.146 4.146 0 0 1 3.928 2.82l25.184 74.62a4.146 4.146 0 0 1-3.928 5.472h29.02a4.146 4.146 0 0 0 3.927-5.472z"></path>
+                                       </svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Azure</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="space-y-3">
+                              <h4 class="text-sm font-medium">
+                                 Source Code (select all that apply)<!-- --> 
+                              </h4>
+                              <div class="grid grid-cols-2 gap-2">
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="code-github" class="sr-only peer" name="code" value="github">
+                                    <div class="flex-shrink-0 ml-2.5">
+                                       <svg class="h-4 w-auto" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path>
+                                       </svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">GitHub</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="code-gitlab" class="sr-only peer" name="code" value="gitlab">
+                                    <div class="flex-shrink-0 ml-2.5">
+                                       <svg class="h-4 w-auto" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill="#E24329" d="M31.462 12.779l-.045-.115-4.35-11.35a1.137 1.137 0 00-.447-.541 1.163 1.163 0 00-1.343.071c-.187.15-.322.356-.386.587l-2.94 9.001h-11.9l-2.941-9a1.138 1.138 0 00-1.045-.84 1.153 1.153 0 00-1.13.72L.579 12.68l-.045.113a8.09 8.09 0 002.68 9.34l.016.012.038.03 6.635 4.967 3.28 2.484 1.994 1.51a1.35 1.35 0 001.627 0l1.994-1.51 3.282-2.484 6.673-4.997.018-.013a8.088 8.088 0 002.69-9.352z"></path>
+                                          <path fill="#FC6D26" d="M31.462 12.779l-.045-.115a14.748 14.748 0 00-5.856 2.634l-9.553 7.24A11225.6 11225.6 0 0022.1 27.14l6.673-4.997.019-.013a8.09 8.09 0 002.67-9.352z"></path>
+                                          <path fill="#FCA326" d="M9.908 27.14l3.275 2.485 1.994 1.51a1.35 1.35 0 001.627 0l1.994-1.51 3.282-2.484s-2.835-2.14-6.092-4.603l-6.08 4.603z"></path>
+                                          <path fill="#FC6D26" d="M6.435 15.305A14.712 14.712 0 00.58 12.672l-.045.113a8.09 8.09 0 002.68 9.347l.016.012.038.03 6.635 4.967 6.105-4.603-9.573-7.233z"></path>
+                                       </svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">GitLab</h5>
+                                       <div class="inline-flex items-center gap-0.5 rounded-full border border-transparent bg-gray-100 px-1.5 py-0 text-[9px] font-medium text-gray-600 whitespace-nowrap">Coming soon</div>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="space-y-3">
+                              <h4 class="text-sm font-medium">
+                                 Metrics (select all that apply)<!-- --> 
+                              </h4>
+                              <div class="grid grid-cols-2 gap-2">
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="metric-prometheus" class="sr-only peer" name="metrics" value="prometheus">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Prometheus" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/prometheus-colored.png"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Prometheus</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="metric-datadog-metrics" class="sr-only peer" name="metrics" value="datadog-metrics">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="Datadog" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/datadog-colored.svg"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">Datadog</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="metric-cloudwatch-metrics" class="sr-only peer" name="metrics" value="cloudwatch-metrics">
+                                    <div class="flex-shrink-0 ml-2.5"><img alt="CloudWatch" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="h-4 w-auto" style="color:transparent" src="/images/icons/try-it-out/aws.webp"></div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">CloudWatch</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                                 <label class="flex cursor-pointer items-center space-x-2.5 rounded-md border border-[#e5e7eb] p-2.5 transition-colors min-h-[44px] hover:bg-[#f4f4f5] has-[:checked]:bg-[#18181b0d] has-[:checked]:border-[#18181b]">
+                                    <input type="checkbox" id="metric-gcp-metrics" class="sr-only peer" name="metrics" value="gcp-metrics">
+                                    <div class="flex-shrink-0 ml-2.5">
+                                       <svg class="h-4 w-auto" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill="#ea4535" d="M80.6 40.3h.4l-.2-.2 14-14v-.3c-11.8-10.4-28.1-14-43.2-9.5C36.5 20.8 24.9 32.8 20.7 48c.2-.1.5-.2.8-.2 5.2-3.4 11.4-5.4 17.9-5.4 2.2 0 4.3.2 6.4.6.1-.1.2-.1.3-.1 9-9.9 24.2-11.1 34.6-2.6h-.1z"></path>
+                                          <path fill="#557ebf" d="M108.1 47.8c-2.3-8.5-7.1-16.2-13.8-22.1L80 39.9c6 4.9 9.5 12.3 9.3 20v2.5c16.9 0 16.9 25.2 0 25.2H63.9v20h-.1l.1.2h25.4c14.6.1 27.5-9.3 31.8-23.1 4.3-13.8-1-28.8-13-36.9z"></path>
+                                          <path fill="#36a852" d="M39 107.9h26.3V87.7H39c-1.9 0-3.7-.4-5.4-1.1l-15.2 14.6v.2c6 4.3 13.2 6.6 20.7 6.6z"></path>
+                                          <path fill="#f9bc15" d="M40.2 41.9c-14.9.1-28.1 9.3-32.9 22.8-4.8 13.6 0 28.5 11.8 37.3l15.6-14.9c-8.6-3.7-10.6-14.5-4-20.8 6.6-6.4 17.8-4.4 21.7 3.8L68 55.2C61.4 46.9 51.1 42 40.2 42.1z"></path>
+                                       </svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0 flex items-center gap-1.5">
+                                       <h5 class="text-xs font-medium leading-tight">GCP Metrics</h5>
+                                    </div>
+                                    <div class="flex h-4 w-4 flex-shrink-0 ml-2.5 items-center justify-center opacity-0 transition-opacity duration-150 peer-checked:opacity-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 text-[#18181b]" aria-hidden="true">
+                                          <path d="M20 6 9 17l-5-5"></path>
+                                       </svg>
+                                    </div>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="space-y-6 hidden" id="form-sect-2">
+                           <button
+                              id="back"
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black disabled:opacity-50 hover:bg-gray-100 hover:text-gray-900 h-9 px-4 py-2 mb-4 -ml-4 cursor-pointer"
+                              data-testid="back-button"
+                              type="button"
+                              >
+                           ← Back
+                           </button>
+                           <div>
+                              <h2 class="text-3xl font-medium tracking-tight mb-3">
+                                 Connect with the Cleric team
+                              </h2>
+                              <p class="text-[14px] font-[400] text-[#71717a]">
+                                 A Cleric engineer will set up your dedicated instance (ready in ~24 hours).
+                                 Book a call to discuss your setup and get started.
+                              </p>
+                           </div>
+                           <div class="space-y-4">
+                              <div class="space-y-2 mt-6 mb-0">
+                                 <label class="text-sm font-medium text-gray-900" for="name">
+                                    Name <span class="text-red-500">*</span>
+                                 </label>
+                                 <input
+                                    class="mt-2 h-11 w-full rounded-md border border-gray-300 bg-white px-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-black focus:border-black disabled:cursor-not-allowed disabled:opacity-50"
+                                    id="name"
+                                    placeholder="Your name"
+                                    type="text"
+                                 />
+                              </div>
+                              <div class="mt-6 mb-0">
+                                 <label class="text-sm font-medium text-gray-900" for="email">
+                                    Work email <span class="text-red-500">*</span>
+                                 </label>
+                                 <div class="relative">
+                                    <input
+                                       class="mt-2 h-11 w-full rounded-md border border-gray-300 bg-white px-3 pr-10 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-black focus:border-black disabled:cursor-not-allowed disabled:opacity-50"
+                                       id="email"
+                                       placeholder="you@company.com"
+                                       type="email"
+                                    />
+                                 </div>
+                              </div>
+                              <div class="mt-6">
+                                 <label class="text-sm font-medium text-gray-900">
+                                    What are you looking to solve? <span class="text-red-500">*</span>
+                                 </label>
+                                 <div class="space-y-2 mt-2">
+                                    <div class="flex items-center space-x-3">
+                                       <input id="noisy-alerts" class="h-4 w-4 rounded border-gray-300 accent-black focus:ring-black" type="checkbox" />
+                                       <label class="text-sm font-normal text-gray-700 cursor-pointer" for="noisy-alerts">
+                                          Too many alerts / noisy alerts
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                       <input id="slow-rca" class="h-4 w-4 rounded border-gray-300 accent-black focus:ring-black" type="checkbox" />
+                                       <label class="text-sm font-normal text-gray-700 cursor-pointer" for="slow-rca">
+                                          Slow RCA process
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                       <input id="cross-team" class="h-4 w-4 rounded border-gray-300 accent-black focus:ring-black" type="checkbox" />
+                                       <label class="text-sm font-normal text-gray-700 cursor-pointer" for="cross-team">
+                                          Cross-team incidents
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                       <input id="sre-agent" class="h-4 w-4 rounded border-gray-300 accent-black focus:ring-black" type="checkbox" />
+                                       <label class="text-sm font-normal text-gray-700 cursor-pointer" for="sre-agent">
+                                          We use coding agents and want to explore an SRE agent
+                                       </label>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                       <input id="other" class="h-4 w-4 rounded border-gray-300 accent-black focus:ring-black" type="checkbox" />
+                                       <label class="text-sm font-normal text-gray-700 cursor-pointer" for="other">
+                                          Other
+                                       </label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-6">
+                                 <label class="text-sm font-medium text-gray-900" for="comments">
+                                    Anything else about your setup we should know?
+                                 </label>
+                                 <textarea
+                                    class="mt-2 min-h-[80px] w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-black focus:border-black disabled:cursor-not-allowed disabled:opacity-50"
+                                    id="comments"
+                                    placeholder="Optional - e.g., 'We use custom auth for K8s'"
+                                 ></textarea>
+                              </div>
+                              <div class="space-y-2">
+                                 <div class="flex items-start space-x-3">
+                                    <input
+                                       id="terms"
+                                       class="mt-1 h-4 w-4 rounded border-gray-300 accent-black focus:ring-black"
+                                       type="checkbox"
+                                    />
+                                    <label class="text-sm font-normal leading-relaxed text-gray-700 cursor-pointer" for="terms">
+                                       I accept the
+                                       <a
+                                          href="https://cleric.ai/terms-and-conditions"
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          class="inline-flex items-center gap-1 text-black underline hover:no-underline"
+                                       >
+                                          Terms &amp; Conditions
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3" aria-hidden="true">
+                                             <path d="M15 3h6v6"></path>
+                                             <path d="M10 14 21 3"></path>
+                                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                          </svg>
+                                       </a>
+                                    </label>
+                                 </div>
+                              </div>
+                              <div class="mt-6">
+                                 <button
+                                    id="bookCallBtn"
+                                    class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black disabled:cursor-not-allowed disabled:opacity-50 bg-black text-white hover:bg-black/90 h-9 px-4 py-2 cursor-pointer disabled:cursor-not-allowed"
+                                    type="button"
+                                    disabled
+                                 >
+                                    Book a call
+                                 </button>
+                              </div>
+                              <p id="bookCallHint" class="text-xs text-gray-500">
+                                 To book a call, please enter your name, enter your work email, select at least one option above, and accept the Terms &amp; Conditions.
+                              </p>
+                              <p class="text-xs text-center text-gray-500 mt-6">
+                                 Questions?
+                                 <a href="mailto:support@cleric.ai" class="text-black hover:underline">Email us</a>
+                              </p>
+                           </div>
+                        </div> 
+                        <div
+                           id="fitBar"
+                           class="sticky bottom-0 left-0 right-0 border-t backdrop-blur-sm z-10 mt-6"
+                           data-testid="fit-assessment-bar"
+                           >
+                           <div class="flex items-center justify-between gap-3 px-4 py-3">
+                              <div class="flex items-center gap-3 min-w-0 flex-1">
+                                 <div id="fitBarIcon" class="flex-shrink-0"></div>
+                                 <div class="flex items-center gap-2 min-w-0 flex-wrap">
+                                    <span id="fitBarLabel" class="font-medium text-sm"></span>
+                                    <span class="text-sm text-gray-600">|</span>
+                                    <span id="fitBarCount" class="text-sm text-gray-700"></span>
+                                    <span class="text-sm text-gray-600 hidden sm:inline">|</span>
+                                    <span id="fitBarNote" class="text-sm text-gray-600 hidden sm:inline"></span>
+                                 </div>
+                              </div>
+                              <button
+                                 id="continueBtn"
+                                 class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black disabled:opacity-50 h-8 rounded-md px-3 text-xs flex-shrink-0 bg-black text-white cursor-pointer"
+                                 data-testid="continue-button"
+                                 type="button"
+                                 >
+                              Continue
+                              </button>
+                           </div>
+                           <div id="fitBarNoteMobile" class="sm:hidden px-4 pb-3 text-sm text-gray-600"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- DREAPTA -->
+            <div class="w-1/2 h-screen max-[1250px]:w-full max-[1250px]:min-h-0 p-0 bg-[url('/images/illustrations/tree_crowns.webp')] bg-cover bg-center bg-no-repeat">
+               <div class="h-full relative">
+                  <div class="absolute inset-0 bg-black/30"></div>
+                  <div class="content-assessment">
+                     <div class="rounded-2xl border border-white/30 p-2 max-w-lg w-full">
+                        <div class="rounded-xl bg-white p-6">
+                           <div class="space-y-6" id="assessmentCard">
+                              <div class="space-y-1 mb-0">
+                                 <p class="text-xs font-medium uppercase tracking-wider text-gray-600">
+                                    Assessment
+                                 </p>
+                                 <h2 id="assessTitle" class="text-2xl font-bold text-gray-900">
+                                    Select your stack
+                                 </h2>
+                                 <p id="assessDesc" class="text-sm text-gray-600 leading-relaxed">
+                                    See what Cleric can do for you
+                                 </p>
+                              </div>
+                              <div id="capabilitiesSection">
+                                 <div class="space-y-3">
+                                    <h3 class="text-xs font-medium uppercase tracking-wider text-gray-600">
+                                       What Cleric can do:
+                                    </h3>
+                                    <div id="capabilitiesList" class="space-y-3.5"></div>
+                                 </div>
+                              </div>
+
+                           </div>
+
+                           <div class="space-y-6 hidden" id="assessmentText">
+                              <blockquote class="text-base text-gray-800 leading-relaxed mb-4">
+                                 "I see Cleric functioning as an SRE companion available for our Software Engineers. An SRE in my team should maintain a global view across all engineering teams. This means if one team has already solved an alert, we can apply that knowledge elsewhere."
+                              </blockquote>
+                              <div class="flex items-center gap-3">
+                                 <div class="relative h-10 w-10 overflow-hidden rounded-full bg-gray-200">
+                                    <img
+                                       alt="Maxime Fouilleul"
+                                       loading="lazy"
+                                       decoding="async"
+                                       class="absolute inset-0 h-full w-full object-cover"
+                                       src="/images/illustrations/maxime-gry.webp"
+                                    />
+                                 </div>
+                                 <div>
+                                    <div class="text-sm font-medium text-gray-900">Maxime Fouilleul</div>
+                                    <div class="text-xs text-gray-600">Head of Infrastructure &amp; Operations at BlaBlaCar</div>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+
+                     <div class="text-center w-full">
+                        <p class="text-white/80 text-sm tracking-widest uppercase mb-6">
+                           Integrations
+                        </p>
+
+                        <div class="grid grid-cols-4 gap-x-8 gap-y-6 max-w-lg mx-auto integration-img">
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="h-6 mx-auto brightness-0 invert" src="/images/icons/integrations/slack.webp" alt="Slack" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="h-6 mx-auto brightness-0 invert" src="/images/icons/integrations/datadog.webp" alt="Datadog" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="h-6 mx-auto brightness-0 invert" src="/images/icons/integrations/grafana.webp" alt="Grafana" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="h-6 mx-auto brightness-0 invert" src="/images/icons/integrations/elasticsearch.webp" alt="Elasticsearch" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="mx-auto brightness-0 invert" src="/images/icons/integrations/kubernetes.webp" alt="Kubernetes" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="h-6 mx-auto brightness-0 invert" src="/images/icons/integrations/aws.webp" alt="AWS" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="mx-auto brightness-0 invert" src="/images/icons/integrations/google-cloud.webp" alt="Google Cloud" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="h-6 mx-auto brightness-0 invert" src="/images/icons/integrations/azure.webp" alt="Azure" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="h-6 mx-auto brightness-0 invert" src="/images/icons/integrations/github.webp" alt="GitHub" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="mx-auto brightness-0 invert" src="/images/icons/integrations/prometheus.webp" alt="Prometheus" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="mx-auto brightness-0 invert" src="/images/icons/integrations/pagerduty.webp" alt="PagerDuty" />
+                           </div>
+                           <div class="flex items-center justify-center h-6 min-w-[100px]">
+                              <img class="mx-auto brightness-0 invert" src="/images/icons/integrations/confluence.webp" alt="Confluence" />
+                           </div>
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script type="module" src={tryItOutUrl}></script>
+   </body>
+</html>
